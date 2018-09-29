@@ -1,2 +1,4 @@
+#Prevents some useless stuff from getting in
 *.pyc
 .DS_Store
+*.sqlite3
