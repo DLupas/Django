@@ -7,9 +7,9 @@ from .models import Question
 
 from django.http import HttpResponse
 
-def home(request):
+def index(request):
     questions = Question.objects.all().order_by('pub_date')
-    return render(request, 'polls/home.html', {'questions': questions})
+    return render(request, 'polls/index.html', {'questions': questions})
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
